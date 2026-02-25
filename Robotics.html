@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robotics Solutions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+<style>
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px 70px;
+}
+.hero h1{
+  font-size:50px;
+  margin-bottom:15px;
+}
+.hero p{
+  font-size:18px;
+  max-width:700px;
+  margin:auto;
+  opacity:.9;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  padding:60px 8%;
+}
+.service-card{
+  background:#ffffff;
+  color:#222;
+  border-radius:18px;
+  padding:35px 25px;
+  text-align:center;
+  transition:.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+.service-card:hover{
+  transform:translateY(-12px);
+}
+.service-card i{
+  font-size:40px;
+  margin-bottom:15px;
+  color:linear-gradient(45deg, #fc9f25, #2575fc);
+}
+.service-card icon{
+
+}
+.service-card h3{margin-bottom:10px;}
+.service-card p{font-size:15px;color:#555;}
+
+/* INFO SECTION */
+.info{
+  background:#ffffff;
+  color:#222;
+  width:85%;
+  margin:50px auto;
+  padding:60px 40px;
+  border-radius:20px;
+  text-align:center;
+}
+.info h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+.info p{
+  max-width:750px;
+  margin:auto;
+  line-height:1.7;
+  color:#555;
+}
+
+/* FEATURES */
+.features{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+  padding:60px 5%;
+}
+.feature{
+  background:rgba(255,255,255,0.08);
+  padding:20px 25px;
+  border-radius:12px;
+  backdrop-filter:blur(6px);
+  min-width:250px;
+}
+.feature i{
+  margin-right:8px;
+  color:#00eaff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Intelligent Robotics Solutions</h1>
+<p>Empowering next-generation robotics with AI-driven data, perception systems, and automation technologies designed for real-world performance.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+<div class="service-card">
+<div class="icon mb-3">
+  <i class="bi bi-robot fs-1 gradient-icon"></i>
+ </div>
+<h3>Robot Vision</h3>
+<p>Train robotic systems to detect objects, environments, and motion with advanced computer vision datasets.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-route"></i>
+<h3>Navigation AI</h3>
+<p>Precise datasets and models that improve autonomous navigation and spatial awareness.</p>
+</div>
+
+<div class="service-card">
+    <div class="icon mb-3">
+<i class="bi bi-cpu-fill fs-1 gradient-icon"></i>
+</div>
+<h3>Sensor Integration</h3>
+<p>Structured data for LiDAR, cameras, and sensors enabling accurate robotic perception.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-gears"></i>
+<h3>Automation Training</h3>
+<p>Annotated datasets designed for robotic task learning and industrial automation.</p>
+</div>
+
+<div class="service-card">
+    <div class="icon mb-3">
+<i class="bi bi-box-fill fs-1 gradient-icon"></i>
+</div>
+<h3>3D Recognition</h3>
+<p>Train robots to understand depth, shapes, and spatial positioning.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Reliable Systems</h3>
+<p>High-accuracy data pipelines ensuring consistent and safe robotic operations.</p>
+</div>
+
+</section>
+
+<!-- INFO -->
+<section class="info">
+<h2>Advanced Robotics Intelligence</h2>
+<p>
+Our robotics solutions combine structured datasets, machine learning pipelines,
+and real-world testing environments to help intelligent machines perceive,
+analyze, and act accurately. From automation to autonomous systems,
+we support robotics innovation at every stage of development.
+</p>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+<div class="feature"><i class="fa-solid fa-check"></i> High-precision datasets</div>
+<div class="feature"><i class="fa-solid fa-check"></i> Real-world scenario training</div>
+<div class="feature"><i class="fa-solid fa-check"></i> Multi-sensor compatibility</div>
+<div class="feature"><i class="fa-solid fa-check"></i> Scalable AI pipelines</div>
+<div class="feature"><i class="fa-solid fa-check"></i> Industry-ready solutions</div>
+
+</section>
+
+</body>
+</html>

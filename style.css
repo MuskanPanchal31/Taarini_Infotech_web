@@ -49,9 +49,10 @@ body {
 
 #hero {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+   background: #fff;
+  /*background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);*/
   background-size: 600% 600%;
-  color: #fff;
+  color: #050505;
   min-height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
@@ -73,12 +74,12 @@ body {
 
 /* Scoped styles to only apply within #hero */
 #hero .container {
-  max-width: 900px;
+  max-width: 800px;
   position: relative;
   z-index: 2;
 }
 #hero-title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
   animation: fadeUp 1s ease forwards;
   font-weight: 700;
@@ -94,10 +95,10 @@ body {
 
 /* Color rotation animation */
 @keyframes colorRotate {
-  0%   { color: #4dd5ff; }   /* red */
-  33%  { color: #6ba6ff; }   /* blue */
-  66%  { color: #8fffa9; }   /* green */
-  100% { color: #cba8ff; }
+  0%   { color: #067b9f; }   /* red */
+  33%  { color: #488ef7; }   /* blue */
+  66%  { color: #078224; }   /* green */
+  100% { color: #9e61fb; }
 }
 
 /* First appearance animation */
@@ -186,7 +187,7 @@ body {
 #hero .circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(0,212,255,0.2);
+  background: rgba(85, 132, 142, 0.2);
   animation: floatCircle 10s linear infinite;
   z-index: 1;
 }
@@ -208,11 +209,10 @@ body {
 /* About Section*/
 /* ABOUT SECTION */
 .about-section{
-   background-color: #d0f4fc;
+   background-color: #ecf1f3;
 }
 .about-section {
  
-  width: 100%;
  
   margin: auto;
   padding: 60px 0;
@@ -229,7 +229,7 @@ body {
 }
 
 .about-section-highlight {
-  color: #0d6efd;
+  color: #141416;
 }
 
 .about-section-underline {
@@ -255,8 +255,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
-  border-radius: 10px;
-  border: #000;
+  
  
 }
 
@@ -319,7 +318,8 @@ body {
   Gradient Background Section (Services)
 ================================ */
 .services-gradient {
-  background: linear-gradient(135deg, #02f4cc, #c217a0);
+  background: #fff;
+  /*background: linear-gradient(135deg, #02f4cc, #c217a0);*/
   background-size: 300% 300%;
   animation: gradientMove 10s ease infinite;
 }
@@ -397,7 +397,8 @@ body {
         background-color: #f8f9fa; /* Light background for the section */
         padding-top: 5rem !important;
         padding-bottom: 5rem !important;
-        background: linear-gradient(135deg, #ea94d9, #bdfff4);
+
+        background: #fff;
     }
 
     /* Style for the main heading and separator */
@@ -409,7 +410,7 @@ body {
     }
 
     .text-primary {
-        color: #0d6efd !important;
+        color: #087ecc !important;
     }
 
     .fw-bold {

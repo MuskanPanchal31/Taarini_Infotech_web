@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCR Services</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+body{
+  font-family:"Poppins",sans-serif;
+  margin:0;
+  background:linear-gradient(135deg,#cfd9ff,#e2ebf0);
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:60px;
+  background:#ffffff;
+  border-radius:20px;
+  width:80%;
+  margin:60px auto;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.hero-left{width:55%;}
+.hero-left h1{
+  font-size:46px;
+  margin-bottom:15px;
+  color:#222;
+}
+.hero-left p{
+  font-size:18px;
+  line-height:1.7;
+  color:#444;
+}
+.hero-right img{
+  width:400px;
+  height:300px;
+  object-fit:contain;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+  padding:80px 8%;
+}
+.card{
+  background:#fff;
+  border-radius:22px;
+  padding:40px 25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:0.4s;
+}
+.card:hover{
+  transform:translateY(-10px);
+}
+.card i{
+  font-size:40px;
+  margin-bottom:15px;
+  background:linear-gradient(45deg,#ff7a18,#2575fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.card h3{margin-bottom:10px;}
+.card p{color:#555;font-size:15px;}
+
+/* FEATURES */
+.features{
+  background:#fff;
+  width:80%;
+  margin:40px auto;
+  padding:60px;
+  border-radius:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+  text-align:center;
+}
+.features h2{
+  font-size:2.3em;
+  margin-bottom:20px;
+}
+.features p{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  color:#444;
+}
+
+/* QUALITY */
+.quality{
+  width:85%;
+  margin:40px auto;
+  padding:40px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#d4fc79,#96e6a1);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.q-text{
+  flex:1 1 400px;
+  padding:20px;
+}
+.q-text h2{margin-bottom:10px;}
+.q-text ul{
+  list-style:none;
+  padding:0;
+}
+.q-text li{
+  background:#fff;
+  margin:8px 0;
+  padding:10px;
+  border-radius:8px;
+}
+.q-img{
+  flex:1 1 300px;
+  text-align:center;
+}
+.q-img img{
+  width:100%;
+  max-width:350px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-left">
+<h1>Smart OCR Solutions</h1>
+<p>Convert scanned documents, images, PDFs, and handwritten files into accurate, editable digital text using AI-powered Optical Character Recognition technology.</p>
+</div>
+
+<div class="hero-right">
+<img src="ocr-image.png" alt="OCR">
+</div>
+</div>
+
+<!-- CARDS -->
+<section class="cards">
+
+<div class="card">
+<i class="fa-solid fa-file-lines"></i>
+<h3>Document OCR</h3>
+<p>Convert printed documents into editable text formats instantly.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-image"></i>
+<h3>Image to Text</h3>
+<p>Extract text from scanned images, photos, and screenshots.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-language"></i>
+<h3>Multi-Language OCR</h3>
+<p>Recognize text in multiple languages with high precision.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-pen"></i>
+<h3>Handwriting Recognition</h3>
+<p>Advanced AI detects handwritten notes and converts them.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-database"></i>
+<h3>Bulk Processing</h3>
+<p>Process thousands of files automatically with batch OCR.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Secure Processing</h3>
+<p>Your files remain private with encrypted OCR workflows.</p>
+</div>
+
+</section>
+
+<!-- FEATURES -->
+<div class="features">
+<h2>OCR Technology Capabilities</h2>
+<p>
+Our OCR system uses advanced machine learning algorithms to detect characters,
+analyze layouts, and convert visual text into structured digital formats.
+It supports tables, multi-column layouts, stamps, signatures, and complex fonts
+while maintaining formatting accuracy.
+</p>
+</div>
+
+<!-- QUALITY -->
+<div class="quality">
+
+<div class="q-text">
+<h2>Quality & Accuracy</h2>
+<ul>
+<li>AI + Human validation for 99% accuracy</li>
+<li>Layout and formatting preservation</li>
+<li>Supports PDF, PNG, JPG, TIFF formats</li>
+<li>Editable outputs: DOCX, TXT, XLSX</li>
+<li>Fast processing with real-time results</li>
+</ul>
+</div>
+
+<div class="q-img">
+<img src="ocr-quality.png" alt="quality">
+</div>
+
+</div>
+
+</body>
+</html>
