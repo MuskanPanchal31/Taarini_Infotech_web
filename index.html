@@ -12,11 +12,12 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-        <img src="index image/logo1.png" alt="logo" width="60" height="40" class="me-2">
-        Taarini Infotech LLP
+      <img src="index image/Selected photo.png" alt="logo" width="80" height="50" class="me-2">
+      <div class="ttext">Taarini Infotech LLP</div>
+      <div class="cursor"></div>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
@@ -478,6 +479,21 @@ Feel free to reach out anytime — your ideas deserve the best execution!
     // Reset the form after submission
     contactForm.reset();
   });
+const cursor = document.querySelector(".cursor");
+const text = document.querySelector(".ttext");
+
+document.addEventListener("mousemove", e=>{
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+text.addEventListener("mouseenter", ()=>{
+  cursor.style.display="block";
+});
+
+text.addEventListener("mouseleave", ()=>{
+  cursor.style.display="none";
+});
 </script>
 
 </body>

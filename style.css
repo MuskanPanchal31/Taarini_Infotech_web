@@ -22,7 +22,7 @@
 }
 
 .navbar .nav-link:hover {
-  color: #ffd700 !important;
+  color: #4959ec !important;
   transform: translateY(-2px);
 }
 
@@ -32,7 +32,23 @@
   letter-spacing: 0.5px;
   color: #000;
 }
-
+.ttext{
+  font-size:25px;
+  color:black;
+  position:relative;
+  z-index:2; /* text top layer */
+}
+.cursor{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#c9e9ff;
+  position:fixed;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  display:none;
+  z-index:1; /* circle text ke neeche */
+}
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
@@ -49,7 +65,7 @@ body {
 
 #hero {
   font-family: 'Segoe UI', sans-serif;
-   background: #fff;
+  background: #fff;
   /*background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);*/
   background-size: 600% 600%;
   color: #050505;
