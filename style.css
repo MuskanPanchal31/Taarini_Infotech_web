@@ -390,6 +390,7 @@ font-size: 14px;
 }
 .service-card .icon i {
   background: linear-gradient(45deg, #fc9f25, #2575fc);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease;
@@ -403,6 +404,7 @@ font-size: 14px;
 /* Gradient text (Know More) */
 .gradient-text {
   background: linear-gradient(135deg, #02f4cc, #c217a0); /* updated gradient */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
@@ -435,6 +437,7 @@ font-size: 14px;
 .know-more-btn:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #ff86e7, #8effec); /* hover gradient */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
