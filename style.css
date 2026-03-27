@@ -1,6 +1,15 @@
 /* ================================
   Navbar Gradient + Fixed Top
 ================================ */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-size: 1vw;
+}
 .custom-navbar {
   /* FIX 1: Corrected color from #0505e to #05050e */
   background: linear-gradient(135deg, #f2f5f7, #ffffff, #c9e9ff);
@@ -17,6 +26,7 @@
 .navbar .nav-link {
   color: #010101 !important;
   font-weight: 500;
+  font-size: 14px;
   margin: 0 8px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -28,12 +38,12 @@
 
 /* Navbar Brand */
 .navbar-brand {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
   color: #000;
 }
 .ttext{
-  font-size:25px;
+  font-size:20px;
   color:black;
   position:relative;
   z-index:2; /* text top layer */
@@ -95,7 +105,7 @@ body {
   z-index: 2;
 }
 #hero-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   animation: fadeUp 1s ease forwards;
   font-weight: 700;
@@ -229,7 +239,6 @@ body {
 }
 .about-section {
  
- 
   margin: auto;
   padding: 60px 0;
   font-family: 'Poppins', sans-serif;
@@ -272,12 +281,17 @@ body {
   flex-wrap: wrap;
   margin-top: 20px;
   
- 
 }
-
+.about-achievement:hover {
+    transform: scale(1.05);
+}
 .about-achievement{
   border: black;
    border-radius: 5px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+   
 }
 .about-achievement h2 {
   font-size: 28px;
@@ -329,15 +343,33 @@ body {
     font-size: 26px;
   }
 }
+/* FLOAT ANIMATION */
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
 
+/* APPLY TO EACH CARD */
+.about-achievement {
+    animation: floatUpDown 4s ease-in-out infinite;
+}
+
+/* OPTIONAL: delay for wave effect */
+.about-achievement:nth-child(1) { animation-delay: 0s; }
+.about-achievement:nth-child(2) { animation-delay: 0.5s; }
+.about-achievement:nth-child(3) { animation-delay: 1s; }
+.about-achievement:nth-child(4) { animation-delay: 1.5s; }
 /* ================================
   Gradient Background Section (Services)
 ================================ */
 .services-gradient {
   background: #fff;
+
   /*background: linear-gradient(135deg, #02f4cc, #c217a0);*/
   background-size: 300% 300%;
   animation: gradientMove 10s ease infinite;
+   font-size: 14px;
 }
 
 @keyframes gradientMove {
@@ -349,6 +381,13 @@ body {
 /* ================================
   Service Cards
 ================================ */
+.service-card{
+  border: #9d9797 solid 2px;
+ 
+}
+.service-card .text-muted{
+font-size: 14px;
+}
 .service-card .icon i {
   background: linear-gradient(45deg, #fc9f25, #2575fc);
   -webkit-background-clip: text;
@@ -413,13 +452,12 @@ body {
         background-color: #f8f9fa; /* Light background for the section */
         padding-top: 5rem !important;
         padding-bottom: 5rem !important;
-
-        background: #fff;
+        background-color: #ecf1f3;
     }
 
     /* Style for the main heading and separator */
-    .text-muted{
-    font-size: 18px;  
+     #projects .text-muted{
+    font-size: 16px;  
     }
     .text-dark {
         color: #212529 !important;
@@ -444,7 +482,7 @@ body {
 
     .project-row:hover {
         transform: translateY(-5px); /* Lift effect on hover */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        box-shadow: 0 20px 20px rgba(0, 0, 0.1, 0.1); /* Subtle shadow for depth */
     }
 
     /* Project Image Styling */
@@ -511,6 +549,10 @@ body {
 }
 /* Section Background */
 .contact-wrapper {
+  min-height: 100vh; /* full screen */
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: Arial, sans-serif;
     background: #f3f0ff;
     padding-bottom: 40px;
@@ -580,7 +622,10 @@ body {
 
 /* FORM */
 .contact-form {
-    width: 570px;
+  flex: 1;
+   display: flex;
+   flex-direction: column;
+    gap: 15px;
     background: #ffffff;
     padding: 30px;
     border-radius: 15px;
@@ -592,19 +637,16 @@ body {
     gap: 15px;
 }
 
-input,
-textarea,
-select {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    padding: 12px;
-    margin-top: 15px;
+    padding: 14px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 15px;
+    font-size: 14px;
 }
-
-textarea {
-    height: 120px;
+.contact-form textarea {
+    min-height: 120px;
     resize: none;
 }
 
@@ -625,15 +667,20 @@ textarea {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
+    .contact-content {
+        flex-direction: column; /* stack */
+    }
+
     .two-col {
         flex-direction: column;
     }
-    .contact-form, .left-text {
-        width: 100%;
+
+    .left-text {
+        text-align: center;
     }
 }
-
 /* Footer Section*/
 .footer-section {
   background: #000;

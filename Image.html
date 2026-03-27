@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precision Image Annotation Services</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    margin:0;
+    padding:0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  /* HERO SECTION */
+  .hero {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:50px;
+    background: #fdfcfb;
+    border-radius:20px;
+    width:80%;
+    margin:60px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  }
+  .hero-left { width:50%; }
+  .hero-left h1 { font-size:40px; line-height:1.2; margin-bottom:10px; color:#2d3436; }
+  .hero-left h1 span { color: #667eea; }
+  .hero-left p { font-size:18px; color:#636e72; line-height:1.6; margin-bottom: 25px; }
+  
+  .hero-right img { width:100%; max-width: 400px; border-radius:20px; }
+
+  /* 💎 MODERN CARDS SECTION */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 8%;
+      position: relative;
+      z-index: 2;
+    }
+    .new-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding: 40px 25px;
+      color: #2d3436;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .new-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .card-shape {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), transparent);
+      border-radius: 50%;
+    }
+    .new-card .icon {
+      font-size: 45px;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #667eea, #764ba2, #a29bfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .new-card h3 { margin-bottom: 12px; font-size: 1.3em; color: #2d3436; }
+    .new-card p { font-size: 0.95em; color: #636e72; line-height: 1.6; 
+    }
+
+  /* TYPES/INDUSTRIES SECTION */
+  .industry-section {
+    background: #ffffff;
+    padding:80px 20px;
+    text-align:center;
+    border-radius:30px;
+    width:82%;
+    margin:40px auto;
+    box-shadow:0 10px 40px rgba(0,0,0,0.1);
+  }
+  .industry-section h2 { font-size:2.5em; margin-bottom:20px; color:#2d3436; }
+  .industry-list {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:35px;
+  }
+  .industry-tag {
+    background:#f1f2f6;
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight: 400;
+    color: #4834d4;
+    transition: 0.3s;
+    border: 1px solid transparent;
+  }
+  .industry-tag:hover {
+    background: #4834d4;
+    color: white;
+    transform: scale(1.1);
+  }
+
+  /* QUALITY SECTION */
+  .quality-section {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding:50px;
+    margin:60px auto;
+    border-radius:25px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    width:80%;
+  }
+  .quality-text { flex:1 1 450px; padding:20px; }
+  .quality-text h2 { color:#2d3436; font-size:30px; margin-bottom:15px; }
+  .quality-text p { color:#4b4b4b; font-size:16px; line-height:1.7; }
+  
+  .quality-text ul { list-style:none; padding:0; margin-top:20px; }
+  .quality-text ul li {
+    background: rgba(255,255,255,0.6);
+    margin-bottom:10px;
+    padding:12px 18px;
+    border-radius:12px;
+    display: flex;
+    align-items: center;
+  }
+  .quality-text ul li i {
+    color: #4834d4;
+    font-size: 18px;
+    margin-right: 12px;
+  }
+
+  .quality-image img {
+    width:100%;
+    max-width:400px;
+    border-radius:20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; }
+    .hero-left { width: 100%; }
+    .quality-section { flex-direction: column; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+      <h1><span>Transforming Images</span><br>into Intelligent Data</h1>
+      <p>We specialize in high-precision image annotation that fuels next-generation AI. Whether it's bounding boxes, polygons, or semantic segmentation 
+        — we convert raw images into structured data your models can truly understand.</p>
+  </div>
+  <div class="hero-right">
+   <!-- Replace with your annotation-themed image -->
+   <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Image Annotation Illustration">
+  </div>
+</div>
+       
+<!-- 💎 CARD SECTION -->
+  <section class="cards">
+    <div class="card new-card">
+      <div class="card-shape"></div>
+      <div class="icon"><i class="fa-solid fa-vector-square"></i></div>
+      <h3>3D LiDAR Annotation</h3>
+      <p>Precise rectangular labeling for object detection and localization tasks.</p>
+    </div>
+
+    <div class="card new-card">
+      <div class="card-shape"></div>
+      <div class="icon"><i class="fa-solid fa-draw-polygon"></i></div>
+      <h3>2D Polygon Annotation</h3>
+      <p>Detailed perimeter marking for irregular shapes and complex object boundaries.</p>
+    </div>
+
+    <div class="card new-card">
+      <div class="card-shape"></div>
+      <div class="icon"><i class="fa-solid fa-vector-square"></i></div>
+      <h3>3D Polygon Annotation</h3>
+      <p>Identifying specific points of interest for facial recognition and pose estimation.</p>
+    </div>
+
+    <div class="card new-card">
+      <div class="card-shape"></div>
+      <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+      <h3>GIS Mapping</h3>
+      <p>Pixel-level classification to understand every element within an image frame.</p>
+    </div>
+
+    <div class="card new-card">
+      <div class="card-shape"></div>
+      <div class="icon"><i class="fa-solid fa-car-side"></i></div>
+      <h3>3D Cuboids</h3>
+      <p>Adding depth to 2D images for autonomous driving and robotics spatial awareness.</p>
+    </div>
+
+    <div class="card new-card">
+      <div class="card-shape"></div>
+      <div class="icon"><i class="fa-solid fa-tags"></i></div>
+      <h3>Image Tagging</h3>
+      <p>Large-scale classification and metadata enrichment for searchability.</p>
+    </div>
+  </section>
+
+
+<!-- INDUSTRIES -->
+<div class="industry-section">
+  <h2>Target Industries</h2>
+  <p style="max-width:850px; margin:0 auto; font-size:1.1em; color:#636e72;">
+    Our expert annotators provide high-quality datasets tailored for specific industrial requirements, ensuring your computer vision models perform flawlessly in real-world scenarios.
+  </p>
+  <div class="industry-list">
+    <div class="industry-tag">Autonomous Vehicles</div>
+    <div class="industry-tag">Healthcare (MRI/X-Ray)</div>
+    <div class="industry-tag">Agriculture & AgTech</div>
+    <div class="industry-tag">E-commerce & Retail</div>
+    <div class="industry-tag">Security & Surveillance</div>
+    <div class="industry-tag">Drones & Satellite Imagery</div>
+  </div>
+</div>
+
+<!-- QUALITY -->
+<div class="quality-section">
+  <div class="quality-text">
+    <h2><i class="fa-solid fa-microscope"></i> Rigorous Quality Control</h2>
+    <p>We combine human expertise with proprietary validation tools to ensure your training data is 100% reliable.</p>
+    <ul>
+      <li><i class="fa-solid fa-circle-check"></i> Multi-stage review by senior data scientists</li>
+      <li><i class="fa-solid fa-bullseye"></i> 99.9% Labeling Accuracy Guarantee</li>
+      <li><i class="fa-solid fa-file-export"></i> Custom export formats (JSON, XML, YOLO, COCO)</li>
+      <li><i class="fa-solid fa-shield-halved"></i> Secure data handling & ISO compliance</li>
+    </ul>
+  </div>
+  <div class="quality-image">
+    <img src="https://cdn-icons-png.flaticon.com/512/3382/3382413.png" alt="QC Illustration">
+  </div>
+</div>
+
+</body>
+</html>
