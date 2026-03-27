@@ -213,7 +213,7 @@ body {
 #hero .circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(85, 132, 142, 0.2);
+  background: rgba(21, 93, 112, 0.2);
   animation: floatCircle 10s linear infinite;
   z-index: 1;
 }
