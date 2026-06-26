@@ -364,7 +364,7 @@ body {
   Gradient Background Section (Services)
 ================================ */
 .services-gradient {
-  background: #fff;
+  background: hsl(0, 0%, 100%);
 
   /*background: linear-gradient(135deg, #02f4cc, #c217a0);*/
   background-size: 300% 300%;
@@ -382,10 +382,16 @@ body {
   Service Cards
 ================================ */
 .service-card{
-  border: #9d9797 solid 2px;
+  border: #525151 solid 2px;
+  transition: all 0.4s ease;
  
 }
-.service-card .text-muted{
+.service-card:hover {
+  transform:translateY(-10px) scale(1.02);
+    box-shadow: 0 27px 60px rgba(9, 90, 180, 0.50) !important;
+}
+.service-card .text-muted
+{
 font-size: 14px;
 }
 .service-card .icon i {
